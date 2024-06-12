@@ -44,9 +44,13 @@
 
             export default Body;
 # configure firebase hosting
+    - create a project in firebase website
+    - npm install firebase
     - npm install -g firebase-tools
     - firebase login
     - firebase init
         - deploy  (optionally github action)
         - public directory to be :build 
         - single page app -NO
+        - npm run build
+    - firebase deploy
