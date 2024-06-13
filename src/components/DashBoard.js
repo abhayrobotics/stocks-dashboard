@@ -1,25 +1,21 @@
-import React, { useEffect } from 'react'
-import { Search_URL } from '../utils/constant'
-import { options } from '../utils/yahooApi'
+import React, { useEffect } from "react";
+
 
 const DashBoard = () => {
-
-  useEffect(()=>{
+  useEffect(() => {
     handleSearch();
-  },[])
-  const handleSearch = async() =>{
+  }, []);
 
-    // const data = await fetch("https://financialmodelingprep.com/api/v3/search?query=AA?apikey=gZW5k797olakipqjIPGqToAsnotncqpv");
-    const data = await fetch("https://financialmodelingprep.com/api/v3/search?query=tesla&apikey=gZW5k797olakipqjIPGqToAsnotncqpv");
-    const json =  await data.json
-    console.log(json)
-    console.log(data)
-  }
+  const handleSearch = async () => {
+    const data = await fetch(
+      "https://financialmodelingprep.com/api/v3/income-statement/tcs?period=annual&apikey=gZW5k797olakipqjIPGqToAsnotncqpv"
+    );
+    const json = await data.json();
+    console.log(json);
+  
+  };
 
+  return <div>DashBoard</div>;
+};
 
-  return (
-    <div>DashBoard</div>
-  )
-}
-
-export default DashBoard
+export default DashBoard;
