@@ -22,8 +22,8 @@
     - set up the main component as <Body /> in app.js
     - Set the path in the Body component using createBrowserRouter and RouterProvider methods
             
+            
             import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
             const Body = () => {
             const appRouter = createBrowserRouter([
                 {
