@@ -62,3 +62,5 @@
         git remote add origin https://github.com/abhayrobotics/stocks-dashboard.git
         git branch -M main
         git push -u origin main
+
+# configure Redux
