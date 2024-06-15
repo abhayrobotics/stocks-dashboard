@@ -31,6 +31,8 @@ const SearchBar = () => {
       const data = await fetch(URL);
       const json = await data.json();
       console.log(json);
+      
+      // if error use 2nd api key
       if(json["Error Message"]){
         console.log(json["Error Message"])
         fetchQuery(apikey2)
