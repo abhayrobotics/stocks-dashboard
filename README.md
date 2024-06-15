@@ -98,6 +98,8 @@
        - <header>
        - <search>
        - <Suggestion>
+       - nifty - sensex
+       - <Most Searched stocks>
 
 ## Work flow -Developer Guide
 -   initialise app
@@ -117,7 +119,9 @@
     - info
     - financial
     - ratios
--  Api limit crossed for the day.- hardcoded data for top 50 companies
+-  Api limit crossed for the day.- hardcoded data for top 50 companies.
+-  Use chartjs to show the chart
+    -three chart
 
 # Prefixed 
 - button- mx-2 px-4 py-0.5
