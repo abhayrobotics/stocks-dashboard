@@ -64,3 +64,17 @@
         git push -u origin main
 
 # configure Redux
+
+
+## Design Guide
+    - <DashBoard>
+       - <header>
+       - <search>
+       - <Suggestion>
+
+## Work flow -Developer Guide
+-   
+
+# Prefixed 
+- button- mx-2 px-4 py-0.5
+- any component - bg-white bg-opacity-20  w-[80%] sm:w-[100%] py-3 px-3 
