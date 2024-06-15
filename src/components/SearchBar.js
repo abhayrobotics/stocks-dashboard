@@ -3,34 +3,40 @@ import {
   Exchange,
   apikey,
   Search_ticker_prefix,
-  Search_name_prefix,
+  apikey2,
+  
 } from "../utils/constant";
 
 
 const SearchBar = () => {
   // getting the value from input function
   const query = useRef("");
-  console.log(query.current.value);
+  // console.log(query.current.value);
 
   useEffect(() => {
     handleSearch();
   }, []);
 
   const handleSearch =()=>{
-    const fetchQuery = async () => {
+    
+    const fetchQuery = async (api) => {
       const URL =
         Search_ticker_prefix +
         query.current.value +
-        "&limit=100&exchange=" +
+        "&limit=25&exchange=" +
         Exchange +
         "&apikey=" +
-        apikey;
-    //   console.log(URL);
+        api;
+      console.log(URL);
       const data = await fetch(URL);
       const json = await data.json();
       console.log(json);
+      if(json["Error Message"]){
+        console.log(json["Error Message"])
+        fetchQuery(apikey2)
+      }
     };
-    fetchQuery();
+    fetchQuery(apikey);
   };
   return (
     <div>
@@ -41,7 +47,7 @@ const SearchBar = () => {
         >
           <div className=" mr-2 flex justify-between" >
             <input
-              className=" px-2 py-0.5 rounded-md text-[--main-color]"
+              className=" px-2 py-0.5 rounded-md min-w-[300px] text-[--main-color]"
               type="text" placeholder="Search a stock "
               ref={query}
             />
@@ -49,7 +55,7 @@ const SearchBar = () => {
               onClick={handleSearch}
               className=" ml-2 px-4 py-0.5 text-md __light-shade  text-white font-semibold  rounded-md  "
             >
-              Search
+              Search 🔍
             </button>
           </div>
           <div className=" my-2  ">
@@ -58,10 +64,10 @@ const SearchBar = () => {
               <option>NASDAQ- US</option>
               <option>All</option>
             </select>
-            <select className="h-8  px-4 py-0.5 rounded-md ">
+            {/* <select className="h-8  px-4 py-0.5 rounded-md ">
               <option>Stocks & ETF</option>
               <option>Mutual Fund</option>
-            </select>
+            </select> */}
           </div>
 
         </form>

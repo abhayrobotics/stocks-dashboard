@@ -70,7 +70,7 @@
             };
 
             export default Body;
-# configure firebase hosting
+## configure firebase hosting
     - create a project in firebase website
     - npm install firebase
     - npm install -g firebase-tools
@@ -82,7 +82,7 @@
         - npm run build
     - firebase deploy
 
-# configure Github
+## configure Github
     - create a repo in github website
         git add .
         git commit -m "commit statement"
@@ -90,7 +90,47 @@
         git branch -M main
         git push -u origin main
 
-# configure Redux
+## configure Redux
+    -   npm install @reduxjs/toolkit react-redux
+    -   create a appstore.js file 
+            import {configureStore} from "@reduxjs/toolkit";
+            const appStore = configureStore({
+                reducer:{
+                    stock:stockReducer
+
+                }
+            })
+
+            export default appStore
+
+    - add store in our app.js
+            const App = () => {
+                return (
+                    <div>
+                    <Provider store={appStore}>
+                        <Body />
+                    </Provider>
+                    </div>
+                );
+                };
+    - create StockSlice.js
+                import { createSlice } from "@reduxjs/toolkit";
+
+                const stockSlice = createSlice({
+                    name:"stock",
+                    initialState:{
+                        stockId :null,
+                        stockname:null
+                    },
+                    reducers:{
+                        addStockName:(state,action)=>{
+                            state.stockname = action.payload;
+                        }
+                    }
+                })
+
+                export const {addStockName}  = stockSlice.actions
+                export default stockSlice.reducer
 
 
 ## Design Guide
@@ -109,7 +149,9 @@
 -   Configure Github
 -   setup API financialmodelling prep (250 request per day)
 -   search Api request
+    creating 2nd api if first api limit crossed.
 -   setup redux store
+       
 
 
 # features to add
