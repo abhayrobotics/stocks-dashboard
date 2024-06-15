@@ -16,6 +16,33 @@
         }
 ##    configure tailwind 
     - follow https://tailwindcss.com/docs/guides/create-react-app
+    - index.css    
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        @layer base {
+            :root {
+                --main-color: #031d2a;
+                --second-color: #fc8019;
+            
+
+            }
+        }
+
+        /* ********************** custom css CLass */
+        @layer components {
+
+            .x-btn {
+                @apply border-[1px] border-gray-600 px-2 py-1 mx-2 font-medium rounded-md 
+                        hover:text-second-color hover:border-second-color;
+            }
+            
+            .__bannerScroll::-webkit-scrollbar{
+                display: none;
+            }
+
+        }
 
 ##   configure react-router-dom
     - npm i -D react-router-dom

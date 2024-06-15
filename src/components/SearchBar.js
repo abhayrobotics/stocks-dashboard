@@ -5,6 +5,8 @@ import {
   Search_ticker_prefix,
   Search_name_prefix,
 } from "../utils/constant";
+
+
 const SearchBar = () => {
   // getting the value from input function
   const query = useRef("");
@@ -13,7 +15,8 @@ const SearchBar = () => {
   useEffect(() => {
     handleSearch();
   }, []);
-  const handleSearch = () => {
+
+  const handleSearch =()=>{
     const fetchQuery = async () => {
       const URL =
         Search_ticker_prefix +
@@ -22,7 +25,7 @@ const SearchBar = () => {
         Exchange +
         "&apikey=" +
         apikey;
-      console.log(URL);
+    //   console.log(URL);
       const data = await fetch(URL);
       const json = await data.json();
       console.log(json);
@@ -31,12 +34,12 @@ const SearchBar = () => {
   };
   return (
     <div>
-      <div className="  sm:w-[80%] w-[100%] py-3 px-3  flex mx-auto  border border-red-600 bg">
+      <div className="  sm:w-[80%] w-[100%] py-3 px-3  mx-auto flex justify-center   ">
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="flex justify-between  bg-white bg-opacity-20 m-2 flex-wrap items-center flex-col sm:flex-row  rounded-md"
+          className="flex justify-center  bg-white bg-opacity-20 py-2 px-3 flex-wrap items-center flex-col sm:flex-row  rounded-md "
         >
-          <div >
+          <div className=" mr-2 flex justify-between" >
             <input
               className="border px-2 py-0.5 rounded-md text-blue-700"
               type="text"
@@ -44,22 +47,23 @@ const SearchBar = () => {
             />
             <button
               onClick={handleSearch}
-              className=" mx-1 my-1 px-4 py-0.5 text-md  text-white rounded-md bg-blue-300 bg-opacity-90"
+              className=" ml-2 px-4 py-0.5 text-md  text-white rounded-md  "
             >
               Search
             </button>
           </div>
-          <div>
-            <select className="h-8 mx-2 px-4 py-0.5 rounded-md">
+          <div className=" my-2  ">
+            <select className="h-8 mr-2 px-4 py-0.5 rounded-md">
               <option className="">BSE- India</option>
               <option>NASDAQ- US</option>
               <option>All</option>
             </select>
-            <select className="h-8 m-2 px-4 py-0.5 rounded-md ">
+            <select className="h-8  px-4 py-0.5 rounded-md ">
               <option>Stocks & ETF</option>
               <option>Mutual Fund</option>
             </select>
           </div>
+
         </form>
       </div>
     </div>
