@@ -100,7 +100,24 @@
        - <Suggestion>
 
 ## Work flow -Developer Guide
--   
+-   initialise app
+-   configure tailwind
+-   configure react-router
+-   configure firebase Hosting
+-   Configure Github
+-   setup API financialmodelling prep (250 request per day)
+-   search Api request
+-   setup redux store
+
+
+# features to add
+-  color based theme
+-  stock search 
+-  stock details
+    - info
+    - financial
+    - ratios
+-  Api limit crossed for the day.- hardcoded data for top 50 companies
 
 # Prefixed 
 - button- mx-2 px-4 py-0.5

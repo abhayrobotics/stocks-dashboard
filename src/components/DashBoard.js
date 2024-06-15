@@ -6,7 +6,7 @@ const DashBoard = () => {
   
   
   return (
-    <div className="w-screen h-screen bg-[#4c8bd8]">
+    <div className="w-screen h-screen bg-[--main-color]">
       <SearchBar />
     </div>
   );

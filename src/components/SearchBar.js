@@ -37,17 +37,17 @@ const SearchBar = () => {
       <div className="  sm:w-[80%] w-[100%] py-3 px-3  mx-auto flex justify-center   ">
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="flex justify-center  bg-white bg-opacity-20 py-2 px-3 flex-wrap items-center flex-col sm:flex-row  rounded-md "
+          className="flex justify-center  __dark-shade py-2 px-3 flex-wrap items-center flex-col sm:flex-row  rounded-md "
         >
           <div className=" mr-2 flex justify-between" >
             <input
-              className="border px-2 py-0.5 rounded-md text-blue-700"
-              type="text"
+              className=" px-2 py-0.5 rounded-md text-[--main-color]"
+              type="text" placeholder="Search a stock "
               ref={query}
             />
             <button
               onClick={handleSearch}
-              className=" ml-2 px-4 py-0.5 text-md  text-white rounded-md  "
+              className=" ml-2 px-4 py-0.5 text-md __light-shade  text-white font-semibold  rounded-md  "
             >
               Search
             </button>

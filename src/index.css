@@ -4,7 +4,9 @@
 
 @layer base {
     :root {
-        --main-color: #031d2a;
+        --main-color: #4e8dda;
+        /* --main-color: #313438;
+        --main-color: #246d23; */
         --light-color: #fc8019;
 
 
@@ -14,12 +16,17 @@
 /* ********************** custom css CLass */
 @layer components {
 
-    .x-btn {
-        @apply border-[1px] border-gray-600 px-2 py-1 mx-2 font-medium rounded-md hover:text-second-color hover:border-second-color;
+    .__light-shade{
+     @apply bg-white  bg-opacity-20 
+  
+    }
+    .__dark-shade{
+   
+     @apply bg-black bg-opacity-5
     }
 
-    .__bannerScroll::-webkit-scrollbar {
-        display: none;
+    .__container{
+
     }
 
 }
