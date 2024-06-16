@@ -137,8 +137,11 @@
     - <DashBoard>
        - <header>
        - <search>
-       - <Suggestion>
-            - <StockName>
+            - <Suggestion>
+                - <StockName>
+            - <StockDetails />
+                - <Description>
+                - <financial values>
        - nifty - sensex
        - <Most Searched stocks>
 
@@ -152,8 +155,12 @@
 -   search Api request
 -   creating 2nd api if first api limit crossed.
 -   setup redux store
-    - adding search data in stockslice in stockList variable using useDispatch(addStcockList(json))
-    - using the data to show data in Suggestion component using useSelector
+-   Search flow
+    -   adding search data in stockslice in stockList variable using useDispatch(addStcockList(json))
+    -   using the data to show data in Suggestion component using useSelector
+    -   using onclick method to save the symbol in redux store stockname
+
+
     
 
        

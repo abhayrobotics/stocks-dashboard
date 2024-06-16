@@ -23,7 +23,7 @@
     }
     .__dark-shade{
    
-     @apply bg-black bg-opacity-5
+     @apply bg-black bg-opacity-[8%]
     }
 
     .__container{
