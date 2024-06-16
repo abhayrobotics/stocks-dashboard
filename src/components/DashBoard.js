@@ -1,4 +1,5 @@
 import SearchBar from "./SearchBar";
+import Suggestion from "./Suggestion";
 
 
 const DashBoard = () => {
@@ -8,6 +9,7 @@ const DashBoard = () => {
   return (
     <div className="w-screen h-screen bg-[--main-color]">
       <SearchBar />
+      <Suggestion/>
     </div>
   );
 };

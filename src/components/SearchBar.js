@@ -1,17 +1,21 @@
 import { useEffect, useRef } from "react";
+import {useDispatch} from "react-redux"
 import {
   Exchange,
   apikey,
   Search_ticker_prefix,
   apikey2,
+  Search_name_prefix,
+  Search_cik,
   
 } from "../utils/constant";
+import { addStockList } from "../redux-store/stockSlice";
 
 
 const SearchBar = () => {
   // getting the value from input function
   const query = useRef("");
-  // console.log(query.current.value);
+  const dispatch = useDispatch()
 
   useEffect(() => {
     handleSearch();
@@ -23,14 +27,14 @@ const SearchBar = () => {
       const URL =
         Search_ticker_prefix +
         query.current.value +
-        "&limit=25&exchange=" +
-        Exchange +
+        "&limit=10"+
         "&apikey=" +
         api;
       console.log(URL);
       const data = await fetch(URL);
       const json = await data.json();
-      console.log(json);
+      // console.log(json);
+      dispatch(addStockList(json))
       
       // if error use 2nd api key
       if(json["Error Message"]){

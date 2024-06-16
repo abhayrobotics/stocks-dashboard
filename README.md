@@ -138,6 +138,7 @@
        - <header>
        - <search>
        - <Suggestion>
+            - <StockName>
        - nifty - sensex
        - <Most Searched stocks>
 
@@ -149,8 +150,12 @@
 -   Configure Github
 -   setup API financialmodelling prep (250 request per day)
 -   search Api request
-    creating 2nd api if first api limit crossed.
+-   creating 2nd api if first api limit crossed.
 -   setup redux store
+    - adding search data in stockslice in stockList variable using useDispatch(addStcockList(json))
+    - using the data to show data in Suggestion component using useSelector
+    
+
        
 
 
