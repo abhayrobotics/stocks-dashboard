@@ -22,8 +22,8 @@
   
     }
     .__dark-shade{
-   
-     @apply bg-black bg-opacity-[8%]
+       background-color:  #6699da
+     /* @apply bg-black bg-opacity-[8%] */
     }
 
     .__container{
