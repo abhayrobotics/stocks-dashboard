@@ -1,11 +1,16 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 const StockDescription = ({ content }) => {
   console.log(content);
   return (
-    <div className="w-full sm:w-[50%] __dark-shade p-2 m-3 rounded text-slate-200 font-thin">
-        <h2 className="text-lg font-bold ">Company Profile</h2>
-      <div >{content}</div>
+    <div className=" __dark-shade p-3 m-3 rounded text-slate-200 font-thin">
+      <img  className="max-w-12 " src={content?.image}></img>
+      <div  className="text-lg font-semibold">{content?.companyName}</div>
+      <div className="text-md"> CEO: {content?.ceo}</div>
+        <h2 className="text-lg font-semibold "> {content?.industry}</h2>
+      <div >{content?.description}</div>
+      <Link to={content?.website} target="_blank">{content?.website}</Link>
     </div>
   );
 };

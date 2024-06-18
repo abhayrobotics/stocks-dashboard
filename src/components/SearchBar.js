@@ -20,7 +20,7 @@ const SearchBar = () => {
         "&limit=10&exchange=" + Exchange +
         "&apikey=" +
         api;
-      // console.log(URL);
+      console.log(URL);
       const data = await fetch(URL);
       const json = await data.json();
 
