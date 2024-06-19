@@ -6,7 +6,9 @@ const stockSlice = createSlice({
         stockList :[],
         stockname:null,
         stockDetails:null,
-        showSuggestion:false
+        showSuggestion:false,
+        priceData:[],
+        timeStamp:[],
 
     },
     reducers:{
@@ -21,9 +23,15 @@ const stockSlice = createSlice({
         },
         toggleSugesstion:(state,action)=>{
             state.showSuggestion = action.payload
+        },
+        addPriceData:(state,action)=>{
+            state.priceData =action.payload
+        },
+        addTimeStamp:(state,action)=>{
+            state.timeStamp=action.payload
         }
     }
 })
 
-export const {addStockList,addStockName,toggleSugesstion,addStockDetails}  = stockSlice.actions
+export const {addStockList,addStockName,toggleSugesstion,addStockDetails,addPriceData,addTimeStamp}  = stockSlice.actions
 export default stockSlice.reducer

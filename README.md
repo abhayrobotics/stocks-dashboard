@@ -1,4 +1,15 @@
 # SETUP
+
+## Tech Stack
+-   React
+-   react-rounter-dom for navigation
+-   Tailwind for Styling
+-   React-redux for store
+-   Firebase Authentication
+-   Firebase Hosting
+-   chartjs
+
+
 ## Initialise App
 -   cd to designated folder
 -   npx create-react-app ./
@@ -135,15 +146,15 @@
 
 ## Design Guide
     - <DashBoard>
-       - <header>
-       - <search>
-            - <Suggestion>
-                - <StockName>
-            - <StockDetails />
-                - <Description>
-                - <financial values>
-       - nifty - sensex
-       - <Most Searched stocks>
+        -   <header>
+            -   <Login>
+        -   <searchBar>
+            -   <Suggestion>
+           
+        -   <StockDetails />
+                -   <StockDescription content={stockDetails[0]} />
+                -   <StockChart/>
+   
 
 ## Work flow -Developer Guide
 -   initialise app
@@ -161,7 +172,10 @@
     -   using onclick method to save the symbol in redux store stockname
     -   creating useStockinfo Hook to search stock details and saving the data in redux store
     -   using the data to show company details
-    
+-   charts
+-   npm install --save chart.js react-chartjs-2
+-   data extracted and saved in redux store
+-   pending chart
 
 
     

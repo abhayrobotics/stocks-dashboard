@@ -10,3 +10,5 @@ export const Search_cik ="https://financialmodelingprep.com/api/v3/cik-search?qu
 export const StockInfo = "https://financialmodelingprep.com/api/v3/profile/"
 
 export const Exchange = "NASDAQ"
+
+export const Stock_Price ="https://financialmodelingprep.com/api/v3/historical-chart/5min/AAPL?from=2023-08-10&to=2023-09-10"

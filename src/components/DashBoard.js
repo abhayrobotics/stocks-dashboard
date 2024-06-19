@@ -3,6 +3,8 @@ import SearchBar from "./SearchBar";
 import Suggestion from "./Suggestion";
 import StockDetails from "./StockDetails"
 import useStockInfo from "../hooks/useStockInfo";
+import Header from "./Header";
+import useStockData from "../hooks/useStockData";
 
 
 
@@ -11,11 +13,13 @@ const DashBoard = () => {
   const selectedStock = useSelector(store=>store.stock.stockname);
   console.log(selectedStock)
     useStockInfo(selectedStock)
+    
 
   
   
   return (
     <div className="w-screen h-screen bg-[--main-color] relative">
+      <Header />
       <SearchBar />
      { showSuggestion && <Suggestion/>}
      {selectedStock && <StockDetails />}
