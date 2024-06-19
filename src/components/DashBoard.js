@@ -15,7 +15,7 @@ const DashBoard = () => {
   
   
   return (
-    <div className="w-screen h-screen bg-[--main-color]">
+    <div className="w-screen h-screen bg-[--main-color] relative">
       <SearchBar />
      { showSuggestion && <Suggestion/>}
      {selectedStock && <StockDetails />}

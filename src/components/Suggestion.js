@@ -6,14 +6,17 @@ const Suggestion = () => {
   const stockList = useSelector((store) => store.stock.stockList);
   console.log(stockList);
   return (
-    <div className="flex justify-center flex-col mx-auto mb-2 px-3 py-3 sm:w-[80%] max-w-[600px] __dark-shade rounded-md">
+    <div className="relative  sm:w-[80%] max-w-[600px] mx-auto">
+
+    <div className=" absolute top-0 left-0 w-[100%] __bg-suggestion flex justify-center flex-col  mb-2 px-3 py-3  __dark-shade rounded-md border ">
       {stockList?.map((item) => {return(
-      
-          <StockName name={item.name} symbol={item.symbol} key={item.symbol}  />
-          
-     
+        
+        <StockName name={item.name} symbol={item.symbol} key={item.symbol}  />
+        
+        
       )}
-      )}
+    )}
+    </div>
     </div>
   );
 };

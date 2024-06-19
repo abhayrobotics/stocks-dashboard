@@ -25,7 +25,10 @@
        /* background-color:  #6699da */
      @apply bg-black bg-opacity-[8%]
     }
-
+    
+    .__bg-suggestion{
+        @apply bg-[#4182d1]
+    }
     .__container{
 
     }
