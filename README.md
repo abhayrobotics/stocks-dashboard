@@ -159,6 +159,9 @@
     -   adding search data in stockslice in stockList variable using useDispatch(addStcockList(json))
     -   using the data to show data in Suggestion component using useSelector
     -   using onclick method to save the symbol in redux store stockname
+    -   creating useStockinfo Hook to search stock details and saving the data in redux store
+    -   using the data to show company details
+    
 
 
     
