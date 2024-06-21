@@ -10,7 +10,7 @@ const StockChart = () => {
     <div>
       <div>Stcok chart</div>
       <div>
-      
+      {/* importing chart js */}
       </div>
     </div>
   );
