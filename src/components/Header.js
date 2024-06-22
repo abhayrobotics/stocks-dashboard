@@ -7,6 +7,7 @@ const Header = () => {
             <div className='text-lg'>Home</div>
             <div className='flex justify-end'>
 
+            <div className='text-lg px-2'>Portfolio</div>
             <div className='text-lg px-2'>Search</div>
             <div className='text-lg px-2'>Login</div>
             </div>

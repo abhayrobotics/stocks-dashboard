@@ -14,6 +14,7 @@ const DashBoard = () => {
   console.log(selectedStock)
     useStockInfo(selectedStock)
     
+    
 
   
   

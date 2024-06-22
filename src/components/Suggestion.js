@@ -8,7 +8,7 @@ const Suggestion = () => {
   return (
     <div className="relative  sm:w-[80%] max-w-[600px] mx-auto">
 
-    <div className=" absolute top-0 left-0 w-[100%] __bg-suggestion flex justify-center flex-col  mb-2 px-3 py-3  __dark-shade rounded-md border ">
+    <div className=" absolute top-0 left-0 w-[100%] __bg-suggestion flex justify-center  max-h-96 overflow-y-scroll flex-col  mb-2 px-3 py-3  __dark-shade rounded-md border ">
       {stockList?.map((item) => {return(
         
         <StockName name={item.name} symbol={item.symbol} key={item.symbol}  />

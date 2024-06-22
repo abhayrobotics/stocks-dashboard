@@ -17,7 +17,7 @@ const SearchBar = () => {
       const URL =
         Search_name_prefix +
         query.current.value +
-        "&limit=10&exchange=" + Exchange +
+        "&limit=25&exchange=" + Exchange +
         "&apikey=" +
         api;
       console.log(URL);
