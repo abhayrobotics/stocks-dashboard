@@ -1,16 +1,43 @@
 import React from "react";
 import useStockData from "../hooks/useStockData";
-import { Line } from "react-chartjs-2";
-import { CategoryScale, Chart } from "chart.js";
+
+
+
+import 'chart.js/auto';
+import { Chart } from 'react-chartjs-2';
+import { useSelector } from "react-redux";
+
+
 
 const StockChart = () => {
- 
+  
   useStockData();
+  const timestamp = useSelector(store=>store.stock.timeStamp)
+  const priceData = useSelector(store=>store.stock.priceData)
+  const company = useSelector(store=>store.stock.stockDetails[0].companyName)
+  
+  let chartData={
+    labels: timestamp,
+    datasets: [
+      {
+        id: 1,
+        label: company,
+        data: priceData,
+      }
+      
+    ],
+  }
+
+
   return (
     <div>
-      <div>Stcok chart</div>
+      <div>Price Movement</div>
       <div>
       {/* importing chart js */}
+<Chart  className="w-[100%]" type='line' data={chartData} />
+      
+  
+
       </div>
     </div>
   );
