@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { addStockDetails } from "../redux-store/stockSlice"
-import { StockInfo, apikey, apikey2 } from "../utils/constant"
+import { StockInfo, apikey, apikey2 ,apikey3} from "../utils/constant"
 
 // takes input as symbol and return info json
 const useStockInfo =(symbol)=>{
@@ -16,16 +16,23 @@ const useStockInfo =(symbol)=>{
      }  
     
     try {
+         stockInfo(apikey)
+    } 
+    catch (error) 
+    {
+        console.log(error)
+        try {
+            stockInfo(apikey2)
         
          
-         stockInfo(apikey)
-    } catch (error) {
-        console.log(error)
-        stockInfo(apikey2)
+        } catch (error) {
+           stockInfo(apikey3)
+           console.log(error)
+        }
         
     }
 
-    return  
+     
 }
 
 export default useStockInfo;

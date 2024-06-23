@@ -63,8 +63,8 @@ const SearchBar = () => {
           </div>
           <div className=" my-2  ">
             <select className="h-8 mr-2 px-4 py-0.5 rounded-md">
-              <option className="">BSE- India</option>
               <option>NASDAQ- US</option>
+              <option className="">BSE- India</option>
               <option>All</option>
             </select>
             {/* <select className="h-8  px-4 py-0.5 rounded-md ">

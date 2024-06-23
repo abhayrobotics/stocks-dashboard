@@ -1,6 +1,6 @@
 
 
-export const apikey= process.env.REACT_APP_STOCKS_API3
+export const apikey= process.env.REACT_APP_STOCKS_API
 export const apikey2= process.env.REACT_APP_STOCKS_API2
 export const apikey3= process.env.REACT_APP_STOCKS_API3
 

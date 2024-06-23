@@ -6,7 +6,7 @@ const StockDescription = ({ content }) => {
   return (
     <div className=" __dark-shade p-3 m-3 rounded text-slate-200 font-thin">
       <div  className="flex justify-between">
-        <img className="max-w-12 " src={content?.image}></img>
+        <img className="max-w-12 " src={content?.image} alt="Logo"></img>
         <div className="text-2xl  font-semibold p-2 text-[--headlight-color] ">{content?.price +" " +content?.currency}</div>
       </div>
       <div className="text-lg font-semibold">{content?.companyName}</div>

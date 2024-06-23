@@ -19,12 +19,12 @@ const useStockData =()=>{
         // price data
         const closePrice =json?.map(item=>item?.close);
         console.log(closePrice)
-        dispatch(addPriceData(closePrice))
+        dispatch(addPriceData(closePrice.reverse()))
 
         // time data
         const timeStamp = json?.map(item=>item.date.split(" ")[1]);
         // console.log(timeStamp)
-        dispatch(addTimeStamp(timeStamp))
+        dispatch(addTimeStamp(timeStamp.reverse()))
         // dispatch(addStockDetails(json))
 
      }  
