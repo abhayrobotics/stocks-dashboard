@@ -11,7 +11,7 @@ const useStockData =()=>{
     const stockSymbol = useSelector(store=>store.stock.stockname)
     // console.log(stockSymbol)
     const stockData = async (api) =>{
-        const url = "https://financialmodelingprep.com/api/v3/historical-chart/5min/"+stockSymbol+"?from=2023-08-10&to=2023-09-10" + "&apikey=" + api
+        const url = "https://financialmodelingprep.com/api/v3/historical-chart/5min/"+stockSymbol+"?from=2024-06-19&to=2024-06-20" + "&apikey=" + api
         console.log(url)
         const data = await fetch(url)
         const json = await data.json()
