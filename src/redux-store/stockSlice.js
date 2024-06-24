@@ -33,10 +33,10 @@ const stockSlice = createSlice({
             state.timeStamp=action.payload
         },
         addRatios:(state,action)=>{
-            state.ratios =action.payload
+            state.ratios.push(action.payload);
         },
         addRawData:(state,action)=>{
-            state.rawData.push(action.payload);
+            state.rawData=action.payload;
         }
     }
 })

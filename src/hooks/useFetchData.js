@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 
 const useFetchData = (url, stockSymbol,addReducer) => {
     const dispatch =useDispatch()
+    console.log("I am running")
   const fetchData = async (api) => {
     console.log(url + api);
     const data = await fetch(url + api);
@@ -27,7 +28,7 @@ const useFetchData = (url, stockSymbol,addReducer) => {
         console.log(error, "Api key3");
       }
     }
-  }, [stockSymbol]);
+  }, []);
 };
 
 export default useFetchData;

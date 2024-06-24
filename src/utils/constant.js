@@ -1,7 +1,7 @@
 
 
-export const apikey= process.env.REACT_APP_STOCKS_API
-export const apikey2= process.env.REACT_APP_STOCKS_API2
+export const apikey= process.env.REACT_APP_STOCKS_API2
+export const apikey2= process.env.REACT_APP_STOCKS_API
 export const apikey3= process.env.REACT_APP_STOCKS_API3
 
 export const Search_ticker_prefix ="https://financialmodelingprep.com/api/v3/search-ticker?query="
