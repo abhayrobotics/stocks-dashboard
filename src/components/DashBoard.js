@@ -19,7 +19,7 @@ const DashBoard = () => {
   
   
   return (
-    <div className="w-screen min-h-screen bg-[--main-color] relative">
+    <div className="w-[100svw] min-h-screen bg-[--main-color] relative overflow-x-hidden">
       <Header />
       <SearchBar />
      { showSuggestion && <Suggestion/>}

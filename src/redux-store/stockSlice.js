@@ -9,6 +9,8 @@ const stockSlice = createSlice({
         showSuggestion:false,
         priceData:[],
         timeStamp:[],
+        ratios:[],
+        rawData:[]
 
     },
     reducers:{
@@ -29,9 +31,15 @@ const stockSlice = createSlice({
         },
         addTimeStamp:(state,action)=>{
             state.timeStamp=action.payload
+        },
+        addRatios:(state,action)=>{
+            state.ratios =action.payload
+        },
+        addRawData:(state,action)=>{
+            state.rawData.push(action.payload);
         }
     }
 })
 
-export const {addStockList,addStockName,toggleSugesstion,addStockDetails,addPriceData,addTimeStamp}  = stockSlice.actions
+export const {addStockList,addStockName,toggleSugesstion,addStockDetails,addPriceData,addTimeStamp,addRatios,addRawData}  = stockSlice.actions
 export default stockSlice.reducer

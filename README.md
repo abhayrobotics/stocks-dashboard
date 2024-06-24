@@ -185,14 +185,17 @@
 
 # features to add
 -  color based theme
--  stock search 
+-  stock search ✔️
 -  stock details
-    - info
+    - info ✔️
+    - chart ✔️
     - financial
     - ratios
 -  Api limit crossed for the day.- hardcoded data for top 50 companies.
 -  Use chartjs to show the chart
     -three chart
+- portfolio
+- login and saving the portfolio
 
 # Prefixed 
 - button- mx-2 px-4 py-0.5
