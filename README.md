@@ -28,6 +28,8 @@
 ##    configure tailwind 
     - follow https://tailwindcss.com/docs/guides/create-react-app
     - index.css    
+    
+    ```
         @tailwind base;
         @tailwind components;
         @tailwind utilities;
@@ -54,6 +56,7 @@
             }
 
         }
+    ```
 
 ##   configure react-router-dom
     - npm i -D react-router-dom
